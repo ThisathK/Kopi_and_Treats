@@ -1,0 +1,94 @@
+/*
+ * Kopi & Treats design tokens — single source of truth.
+ * Values come from the design export (UI Design/Kopi and treats UI.zip).
+ * Every token is also a CSS variable, e.g. var(--color-espresso), for use in SVGs.
+ */
+@theme {
+  /* Reset Tailwind's default palette so only brand colours exist */
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-espresso: #341a0e;
+  --color-espresso-deep: #1f0f07;
+  --color-roast: #4f2a17;
+  --color-bean-500: #7a4126;
+  --color-bean-600: #6b3a1f;
+  --color-bean-700: #5a2f19;
+  --color-cocoa: #5a3a2a;
+  --color-caramel: #a4500a;
+  --color-brick: #a63a1c;
+  --color-orange: #f79420;
+  --color-orange-soft: #fbb35c;
+  --color-sky: #10b9ff;
+  --color-sky-soft: #7fd5fb;
+  --color-latte: #f2d7b3;
+  --color-latte-deep: #e4c08f;
+  --color-cream: #fff4e2;
+  --color-cream-soft: #fff8ee;
+  --color-paper: #f6ecdd;
+
+  /* Fonts */
+  --font-display: "Brother", "Inter", sans-serif;
+  --font-script: "Optima", "Optima Nova", "Candara", serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Type scale */
+  --text-hero: clamp(76px, 13vw, 200px);
+  --text-hero--line-height: 0.86;
+  --text-section: clamp(48px, 5.4vw, 76px);
+  --text-section--line-height: 0.95;
+  --text-banner: clamp(48px, 5.4vw, 80px);
+  --text-banner--line-height: 0.9;
+  --text-offers: clamp(44px, 4.6vw, 64px);
+  --text-offers--line-height: 0.92;
+  --text-branch: 38px;
+  --text-branch--line-height: 0.95;
+  --text-card: 34px;
+  --text-card--line-height: 1;
+  --text-price: 32px;
+  --text-price--line-height: 1;
+  --text-tagline: clamp(21px, 1.2rem + 0.8vw, 26px);
+  --text-tagline--line-height: 1.25;
+  --text-tagline-sm: clamp(20px, 1.1rem + 0.7vw, 24px);
+  --text-tagline-sm--line-height: 1.25;
+  --text-lead: 18px;
+  --text-lead--line-height: 1.6;
+  --text-body: 16px;
+  --text-body--line-height: 1.6;
+  --text-button: 13px;
+  --text-button--line-height: 1;
+  --text-label: 11px;
+  --text-label--line-height: 1.2;
+
+  /* Letter spacing */
+  --tracking-header-cta: 0.08em;
+  --tracking-button: 0.1em;
+  --tracking-nav: 0.12em;
+  --tracking-label: 0.14em;
+  --tracking-label-wide: 0.16em;
+  --tracking-tag: 0.06em;
+
+  /* Radii */
+  --radius-pill: 999px;
+  --radius-card: 26px;
+  --radius-section: 28px;
+  --radius-photo: 18px;
+  --radius-photo-lg: 20px;
+  --radius-phone: 38px;
+  --radius-phone-screen: 30px;
+
+  /* Shadows */
+  --shadow-banner: 0 24px 48px -12px rgb(52 26 14 / 0.35), 0 6px 14px rgb(52 26 14 / 0.12);
+  --shadow-phone: 0 26px 44px -16px rgb(52 26 14 / 0.55);
+  --shadow-offset: 0 4px 0 var(--color-espresso);
+  --shadow-lift: 0 18px 32px -14px rgb(52 26 14 / 0.45);
+
+  /* Layout */
+  /* Design uses content-box: 1320/1240 content + gutters (32/24 each side) */
+  --container-wide: 1384px;
+  --container-main: 1288px;
+
+  /* Motion */
+  --animate-spin-slow: spin 24s linear infinite;
+}

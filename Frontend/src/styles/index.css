@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@import "./theme.css";
+@import "./fonts.css";
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-paper);
+    color: var(--color-espresso);
+    font-family: var(--font-sans);
+  }
+
+  /* Sections reached from the nav land a little below the viewport edge */
+  [id] {
+    scroll-margin-top: 24px;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-orange);
+    outline-offset: 3px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
