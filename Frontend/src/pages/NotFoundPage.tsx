@@ -1,16 +1,14 @@
 import { Container } from '@/components/layout/Container'
-import { Header } from '@/components/layout/Header'
-import { BeanScatter } from '@/components/illustrations/BeanScatter'
+import { HeroBand } from '@/components/layout/HeroBand'
 import { Button } from '@/components/ui/Button'
 import { DisplayHeading } from '@/components/ui/DisplayHeading'
 
 export function NotFoundPage() {
   return (
-    <div className="relative overflow-hidden bg-espresso text-cream">
-      <Header />
-      <BeanScatter />
+    <HeroBand>
+      <title>Page not found — Kopi &amp; Treats</title>
       <main id="main">
-        <Container size="wide" className="relative z-[1] flex flex-col items-center gap-6 py-24 text-center">
+        <Container size="wide" className="flex flex-col items-center gap-6 py-24 text-center">
           <DisplayHeading as="h1" size="section">
             Spilt the kopi
           </DisplayHeading>
@@ -22,6 +20,6 @@ export function NotFoundPage() {
           </Button>
         </Container>
       </main>
-    </div>
+    </HeroBand>
   )
 }

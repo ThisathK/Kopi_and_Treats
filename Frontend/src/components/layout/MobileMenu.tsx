@@ -1,14 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
+import clsx from 'clsx'
 import { CloseIcon, MenuIcon } from '@/components/icons'
 import { Button } from '@/components/ui/Button'
 import { Logo } from '@/components/ui/Logo'
-import { mainNav } from '@/data/navigation'
 import { site } from '@/data/site'
 import { useLockBodyScroll } from '@/hooks/useLockBodyScroll'
+import type { NavLink } from '@/types/content'
 
 /** Hamburger + full-screen espresso drawer, shown below the lg breakpoint. */
-export function MobileMenu() {
+export function MobileMenu({ links }: { links: NavLink[] }) {
   const [open, setOpen] = useState(false)
   const toggleRef = useRef<HTMLButtonElement>(null)
   const firstLinkRef = useRef<HTMLAnchorElement>(null)
@@ -67,13 +68,17 @@ export function MobileMenu() {
 
           <nav aria-label="Mobile" className="flex flex-1 flex-col justify-center">
             <ul className="m-0 flex list-none flex-col gap-4 p-0">
-              {mainNav.map((link, i) => (
+              {links.map((link, i) => (
                 <li key={link.href}>
                   <Link
                     ref={i === 0 ? firstLinkRef : undefined}
                     to={link.href}
+                    aria-current={link.current ? 'page' : undefined}
                     onClick={() => setOpen(false)}
-                    className="font-display text-[64px] leading-none uppercase text-cream no-underline hover:text-orange"
+                    className={clsx(
+                      'font-display text-[64px] leading-none uppercase no-underline hover:text-orange',
+                      link.current ? 'text-orange' : 'text-cream',
+                    )}
                   >
                     {link.label}
                   </Link>

@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kopi &amp; Treats — Menu</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:"Brother";src:url(./assets/175d16a3ae8ff9294d71775632544436.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Optima";src:url(./assets/6447542548509f64ee69cf13eca4cc00.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Inter";src:url(./assets/493f41f283eccff076100bc318e527a6.woff2) format("woff2");font-weight:100 900;font-display:swap}
+body{margin:0}
+a{color:#341a0e}a:hover{color:#a4500a}
+</style>
+</helmet>
+<div style="font-family: Inter, system-ui, sans-serif; color: #341a0e; background: #f6ecdd; min-height: 100vh">
+
+  <section style="background: #341a0e; color: #fff4e2; position: relative; overflow: hidden">
+    <header style="max-width: 1320px; margin: 0 auto; padding: 22px 32px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; gap: 16px; position: relative; z-index: 2">
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 8px 28px; font-weight: 600; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase">
+        <a href="G-Socials-Offers.dc.html" style="color: #fff4e2; text-decoration: none">Home</a>
+        <a href="#top" aria-current="page" style="color: #f79420; text-decoration: none">Menu</a>
+        <a href="G-Socials-Offers.dc.html" style="color: #fff4e2; text-decoration: none">Branches</a>
+      </nav>
+      <a href="G-Socials-Offers.dc.html" aria-label="Kopi &amp; Treats home" style="justify-self: center; display: block; line-height: 0"><img src="./assets/42e6114219f23d0dd6bcc9d6a5c74079.png" alt="Kopi &amp; Treats — Sip. Savour. Smile" style="height: 60px; width: auto"></a>
+      <a href="#order" style="justify-self: end; display: inline-flex; align-items: center; min-height: 46px; padding: 0 22px; border: 2px solid #fff4e2; border-radius: 999px; color: #fff4e2; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none">Order ahead</a>
+    </header>
+
+    <svg aria-hidden="true" viewBox="0 0 120 80" style="position: absolute; left: 6%; top: 26%; width: 150px; transform: rotate(-24deg)"><ellipse cx="60" cy="40" rx="56" ry="36" fill="#7a4126"></ellipse><path d="M14 46c20-14 40 10 92-12" fill="none" stroke="#341a0e" stroke-width="7" stroke-linecap="round"></path></svg>
+    <svg aria-hidden="true" viewBox="0 0 120 80" style="position: absolute; left: 14%; top: 64%; width: 96px; transform: rotate(30deg)"><ellipse cx="60" cy="40" rx="56" ry="36" fill="#6b3a1f"></ellipse><path d="M14 46c20-14 40 10 92-12" fill="none" stroke="#341a0e" stroke-width="7" stroke-linecap="round"></path></svg>
+    <svg aria-hidden="true" viewBox="0 0 120 80" style="position: absolute; right: 8%; top: 22%; width: 110px; transform: rotate(18deg)"><ellipse cx="60" cy="40" rx="56" ry="36" fill="#6b3a1f"></ellipse><path d="M14 46c20-14 40 10 92-12" fill="none" stroke="#341a0e" stroke-width="7" stroke-linecap="round"></path></svg>
+    <svg aria-hidden="true" viewBox="0 0 120 80" style="position: absolute; right: 4%; top: 58%; width: 170px; transform: rotate(-14deg)"><ellipse cx="60" cy="40" rx="56" ry="36" fill="#7a4126"></ellipse><path d="M14 46c20-14 40 10 92-12" fill="none" stroke="#341a0e" stroke-width="7" stroke-linecap="round"></path></svg>
+    <svg aria-hidden="true" viewBox="0 0 120 80" style="position: absolute; left: 30%; top: 82%; width: 70px; transform: rotate(60deg)"><ellipse cx="60" cy="40" rx="56" ry="36" fill="#5a2f19"></ellipse><path d="M14 46c20-14 40 10 92-12" fill="none" stroke="#341a0e" stroke-width="7" stroke-linecap="round"></path></svg>
+
+    <div id="top" style="max-width: 1320px; margin: 0 auto; padding: 40px 32px 96px; position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; text-align: center">
+      <p style="margin: 0; font-family: Optima, serif; font-size: clamp(24px, 2.4vw, 32px); color: #f79420">brewed, shaken and baked with love</p>
+      <h1 style="margin: 36px 0 0; font-family: Brother, Inter, sans-serif; font-weight: 700; font-size: clamp(80px, 12vw, 180px); line-height: 1; text-transform: uppercase; color: #fff4e2">Our menu</h1>
+      <p style="margin: 32px 0 0; max-width: 520px; font-size: 18px; line-height: 1.6; color: #f2d7b3">From your first espresso of the day to a slice of something sweet — here is everything we pour and bake.</p>
+    </div>
+  </section>
+
+  <main>
+  <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 28px">
+
+    <nav aria-label="Menu sections" style="margin-top: -30px; position: relative; z-index: 2; background: #fff8ee; border-radius: 999px; padding: 10px; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; box-shadow: 0 18px 36px -14px rgba(52,26,14,0.4)">
+        <a href="#hot-coffee" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #a63a1c; color: #fff4e2; font-weight: 700; font-size: 14px; text-decoration: none">Hot coffee</a>
+        <a href="#cold-coffee" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #10b9ff; color: #341a0e; font-weight: 700; font-size: 14px; text-decoration: none">Cold coffee</a>
+        <a href="#tea" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #341a0e; color: #fff4e2; font-weight: 700; font-size: 14px; text-decoration: none">Tea</a>
+        <a href="#iced-tea" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #f79420; color: #341a0e; font-weight: 700; font-size: 14px; text-decoration: none">Iced tea</a>
+        <a href="#milkshakes" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #f2d7b3; color: #341a0e; font-weight: 700; font-size: 14px; text-decoration: none">Milkshakes</a>
+        <a href="#frappe" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #a63a1c; color: #fff4e2; font-weight: 700; font-size: 14px; text-decoration: none">Frappe</a>
+        <a href="#fizzy" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #d6f2ff; color: #341a0e; font-weight: 700; font-size: 14px; text-decoration: none">Fizzy drinks</a>
+        <a href="#waffles" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #f79420; color: #341a0e; font-weight: 700; font-size: 14px; text-decoration: none">Waffles</a>
+        <a href="#cakes" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #f2d7b3; color: #341a0e; font-weight: 700; font-size: 14px; text-decoration: none">Cakes</a>
+    </nav>
+
+    <div style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; padding-top: 24px">
+      <span style="border: 1.5px solid #341a0e; border-radius: 999px; padding: 5px 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase">Coffee &amp; tea</span>
+      <h2 style="margin: 0; font-family: Brother, Inter, sans-serif; font-weight: 700; font-size: clamp(48px, 5.4vw, 76px); line-height: 1.05; text-transform: uppercase">The kopi bar</h2>
+    </div>
+
+    <section id="hot-coffee" style="background: #f2d7b3; color: #341a0e; border-radius: 28px; padding: clamp(18px, 3vw, 28px); display: flex; flex-wrap: wrap; gap: 36px; align-items: stretch;">
+        <div style="flex: 1 1 320px; min-height: 360px; border-radius: 22px; background: #e4c08f; display: flex; align-items: center; justify-content: center">
+          <span style="background: #fff4e2; color: #341a0e; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px">Photo: hot coffee</span>
+        </div>
+        <div style="flex: 2 1 520px; display: flex; flex-direction: column; gap: 22px">
+          <div style="display: flex; flex-direction: column; gap: 12px">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #341a0e; opacity: 0.85">Coffee &amp; tea</span>
+            <h2 style="margin: 0; font-family: Brother, Inter, sans-serif; font-weight: 700; font-size: clamp(40px, 4.4vw, 60px); line-height: 1.08; text-transform: uppercase">Hot coffee</h2>
+            <p style="margin: 0; font-family: Optima, serif; font-size: 22px; color: #a4500a">warm cups, pulled with care</p>
+          </div>
+          <ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); column-gap: 44px">
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Espresso</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 450</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Espresso Doppio</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 550</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Espresso Macchiato</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 600</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Black coffee</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 550</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Americano</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 550</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Cortado</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 580</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Cappuccino</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 700</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Latte</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 850</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Flat white</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 850</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Spanish latte</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 950</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Hazelnut latte</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 1,050</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Almond latte</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 1,050</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Mocha <span style="font-size: 13px; color: #6b4a3a">(chocolate / caramel)</span></span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 850</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Hot chocolate</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 800</span></li>
+          </ul>
+        </div>
+    </section>
+
+    <section id="cold-coffee" style="background: #fff8ee; color: #341a0e; border-radius: 28px; padding: clamp(18px, 3vw, 28px); display: flex; flex-wrap: wrap; gap: 36px; align-items: stretch; border: 2px solid #e4c08f;">
+        <div style="flex: 2 1 520px; display: flex; flex-direction: column; gap: 22px">
+          <div style="display: flex; flex-direction: column; gap: 12px">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #341a0e; opacity: 0.85">Coffee &amp; tea</span>
+            <h2 style="margin: 0; font-family: Brother, Inter, sans-serif; font-weight: 700; font-size: clamp(40px, 4.4vw, 60px); line-height: 1.08; text-transform: uppercase">Cold coffee</h2>
+            <p style="margin: 0; font-family: Optima, serif; font-size: 22px; color: #a4500a">over ice, never watered down</p>
+          </div>
+          <ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); column-gap: 44px">
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Iced Americano</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 600</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Iced Orange Americano</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 700</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">King Coconut Americano</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 850</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Iced latte</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 850</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Iced Hazelnut latte</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 1,100</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Iced Almond latte</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 1,100</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Iced coffee</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 850</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Coffee shake</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 1,200</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Iced chocolate</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 800</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Affogato</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 900</span></li>
+          </ul>
+        </div>
+        <div style="flex: 1 1 320px; min-height: 360px; border-radius: 22px; background: #a9e2fd; display: flex; align-items: center; justify-content: center">
+          <span style="background: #fff4e2; color: #341a0e; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px">Photo: iced coffee</span>
+        </div>
+    </section>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 28px">
+      <section id="tea" style="flex: 1 1 440px; background: #341a0e; color: #fff4e2; border-radius: 28px; padding: clamp(18px, 3vw, 28px); display: flex; flex-direction: column; gap: 22px;">
+        <div style="min-height: 230px; border-radius: 22px; background: #4f2a17; display: flex; align-items: center; justify-content: center">
+          <span style="background: #fff4e2; color: #341a0e; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px">Photo: tea</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px; padding: 0 6px 6px">
+          <div style="display: flex; flex-direction: column; gap: 12px">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #fff4e2; opacity: 0.85">Coffee &amp; tea</span>
+            <h2 style="margin: 0; font-family: Brother, Inter, sans-serif; font-weight: 700; font-size: clamp(40px, 4.4vw, 60px); line-height: 1.08; text-transform: uppercase">Tea selection</h2>
+            <p style="margin: 0; font-family: Optima, serif; font-size: 22px; color: #f79420">for a gentler cup</p>
+          </div>
+          <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Milk tea</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(242,215,179,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 400</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Green tea</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(242,215,179,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 350</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Black tea</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(242,215,179,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 300</span></li>
+          </ul>
+        </div>
+      </section>
+      <section id="iced-tea" style="flex: 1 1 440px; background: #f79420; color: #341a0e; border-radius: 28px; padding: clamp(18px, 3vw, 28px); display: flex; flex-direction: column; gap: 22px;">
+        <div style="min-height: 230px; border-radius: 22px; background: #fbb35c; display: flex; align-items: center; justify-content: center">
+          <span style="background: #fff4e2; color: #341a0e; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px">Photo: iced tea</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px; padding: 0 6px 6px">
+          <div style="display: flex; flex-direction: column; gap: 12px">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #341a0e; opacity: 0.85">Cold beverages</span>
+            <h2 style="margin: 0; font-family: Brother, Inter, sans-serif; font-weight: 700; font-size: clamp(40px, 4.4vw, 60px); line-height: 1.08; text-transform: uppercase">Iced tea</h2>
+            <p style="margin: 0; font-family: Optima, serif; font-size: 22px; color: #341a0e">fruity and refreshing</p>
+          </div>
+          <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Lemon</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.4); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 400</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Strawberry</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.4); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 400</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Blueberry</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.4); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 400</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Peach</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.4); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 400</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Lychee</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.4); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 400</span></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+  <div style="background: #f2d7b3; margin-top: 72px; padding: 64px 0 80px">
+  <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 28px">
+    <div style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; padding-top: 0px">
+      <span style="border: 1.5px solid #341a0e; border-radius: 999px; padding: 5px 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase">Cold beverages</span>
+      <h2 style="margin: 0; font-family: Brother, Inter, sans-serif; font-weight: 700; font-size: clamp(48px, 5.4vw, 76px); line-height: 1.05; text-transform: uppercase">Shakes &amp; sips</h2>
+    </div>
+
+    <section id="milkshakes" style="background: #341a0e; color: #fff4e2; border-radius: 28px; padding: clamp(18px, 3vw, 28px); display: flex; flex-wrap: wrap; gap: 36px; align-items: stretch;">
+        <div style="flex: 1 1 320px; min-height: 360px; border-radius: 22px; background: #4f2a17; display: flex; align-items: center; justify-content: center">
+          <span style="background: #fff4e2; color: #341a0e; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px">Photo: milkshake</span>
+        </div>
+        <div style="flex: 2 1 520px; display: flex; flex-direction: column; gap: 22px">
+          <div style="display: flex; flex-direction: column; gap: 12px">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #fff4e2; opacity: 0.85">Cold beverages</span>
+            <h2 style="margin: 0; font-family: Brother, Inter, sans-serif; font-weight: 700; font-size: clamp(40px, 4.4vw, 60px); line-height: 1.08; text-transform: uppercase">Milkshakes</h2>
+            <p style="margin: 0; font-family: Optima, serif; font-size: 22px; color: #f79420">thick, creamy, very slurpable</p>
+          </div>
+          <ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); column-gap: 44px">
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Vanilla</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(242,215,179,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 750</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Chocolate</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(242,215,179,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 800</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Strawberry</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(242,215,179,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 750</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Milo</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(242,215,179,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 950</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Malt shake</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(242,215,179,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 950</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Cookie</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(242,215,179,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 950</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Faluda</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(242,215,179,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 950</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Nutella shake</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(242,215,179,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 1,200</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Peanut butter shake</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(242,215,179,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 1,200</span></li>
+          </ul>
+          <p style="margin: 4px 0 0; align-self: flex-start; background: #f79420; color: #341a0e; border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 700">Add whipped cream for Rs. 200</p>
+        </div>
+    </section>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 28px">
+      <section id="frappe" style="flex: 1 1 440px; background: #fff8ee; color: #341a0e; border-radius: 28px; padding: clamp(18px, 3vw, 28px); display: flex; flex-direction: column; gap: 22px; border: 2px solid #e4c08f;">
+        <div style="min-height: 230px; border-radius: 22px; background: #e4c08f; display: flex; align-items: center; justify-content: center">
+          <span style="background: #fff4e2; color: #341a0e; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px">Photo: chocolate frappe</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px; padding: 0 6px 6px">
+          <div style="display: flex; flex-direction: column; gap: 12px">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #341a0e; opacity: 0.85">Cold beverages</span>
+            <h2 style="margin: 0; font-family: Brother, Inter, sans-serif; font-weight: 700; font-size: clamp(40px, 4.4vw, 60px); line-height: 1.08; text-transform: uppercase">Frappe</h2>
+            <p style="margin: 0; font-family: Optima, serif; font-size: 22px; color: #a4500a">blended and chilled</p>
+          </div>
+          <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Chocolate frappe</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.35); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 1,400</span></li>
+          </ul>
+        </div>
+      </section>
+      <section id="fizzy" style="flex: 1 1 440px; background: #d6f2ff; border: 2px solid #a9e2fd; color: #341a0e; border-radius: 28px; padding: clamp(18px, 3vw, 28px); display: flex; flex-direction: column; gap: 22px;">
+        <div style="min-height: 230px; border-radius: 22px; background: #8fd8fc; display: flex; align-items: center; justify-content: center">
+          <span style="background: #fff4e2; color: #341a0e; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px">Photo: mojito</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px; padding: 0 6px 6px">
+          <div style="display: flex; flex-direction: column; gap: 12px">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #341a0e; opacity: 0.85">Cold beverages</span>
+            <h2 style="margin: 0; font-family: Brother, Inter, sans-serif; font-weight: 700; font-size: clamp(40px, 4.4vw, 60px); line-height: 1.08; text-transform: uppercase">Fizzy drinks</h2>
+            <p style="margin: 0; font-family: Optima, serif; font-size: 22px; color: #0b6e99">bubbly mocktails</p>
+          </div>
+          <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Virgin mojito</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(11,110,153,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 700</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Watermelon mojito</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(11,110,153,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 800</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Pomegranate mojito</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(11,110,153,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 800</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Grenadine mojito</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(11,110,153,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 800</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Blue curaçao</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(11,110,153,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 800</span></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+  </div>
+  </div>
+
+  <div style="max-width: 1240px; margin: 0 auto; padding: 72px 24px 0; display: flex; flex-direction: column; gap: 28px">
+    <div style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; padding-top: 0px">
+      <span style="border: 1.5px solid #341a0e; border-radius: 999px; padding: 5px 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase">From the kitchen</span>
+      <h2 style="margin: 0; font-family: Brother, Inter, sans-serif; font-weight: 700; font-size: clamp(48px, 5.4vw, 76px); line-height: 1.05; text-transform: uppercase">The treats</h2>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 28px">
+      <section id="waffles" style="flex: 1 1 440px; background: #f79420; color: #341a0e; border-radius: 28px; padding: clamp(18px, 3vw, 28px); display: flex; flex-direction: column; gap: 22px;">
+        <div style="min-height: 230px; border-radius: 22px; background: #fbb35c; display: flex; align-items: center; justify-content: center">
+          <span style="background: #fff4e2; color: #341a0e; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px">Photo: waffle</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px; padding: 0 6px 6px">
+          <div style="display: flex; flex-direction: column; gap: 12px">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #341a0e; opacity: 0.85">From the kitchen</span>
+            <h2 style="margin: 0; font-family: Brother, Inter, sans-serif; font-weight: 700; font-size: clamp(40px, 4.4vw, 60px); line-height: 1.08; text-transform: uppercase">Waffles &amp; savories</h2>
+            <p style="margin: 0; font-family: Optima, serif; font-size: 22px; color: #341a0e">golden, crisp and made to order</p>
+          </div>
+          <h3 style="margin: 6px 0 0; font-weight: 700; font-size: 18px">Savory</h3>
+          <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Savory waffle</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.4); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 1,300</span></li>
+          </ul>
+          <h3 style="margin: 6px 0 0; font-weight: 700; font-size: 18px">Sweet</h3>
+          <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Strawberry topping</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.4); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 1,400</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Chocolate waffle</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.4); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 1,300</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Vanilla waffle</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(52,26,14,0.4); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 1,200</span></li>
+          </ul>
+        </div>
+      </section>
+      <section id="cakes" style="flex: 1 1 440px; background: #341a0e; color: #fff4e2; border-radius: 28px; padding: clamp(18px, 3vw, 28px); display: flex; flex-direction: column; gap: 22px;">
+        <div style="min-height: 230px; border-radius: 22px; background: #4f2a17; display: flex; align-items: center; justify-content: center">
+          <span style="background: #fff4e2; color: #341a0e; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px">Photo: cakes &amp; cookies</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px; padding: 0 6px 6px">
+          <div style="display: flex; flex-direction: column; gap: 12px">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #fff4e2; opacity: 0.85">From the kitchen</span>
+            <h2 style="margin: 0; font-family: Brother, Inter, sans-serif; font-weight: 700; font-size: clamp(40px, 4.4vw, 60px); line-height: 1.08; text-transform: uppercase">Cakes</h2>
+            <p style="margin: 0; font-family: Optima, serif; font-size: 22px; color: #f79420">the perfect partner for your kopi</p>
+          </div>
+          <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Coffee cake piece</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(242,215,179,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 330</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Butter cake piece</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(242,215,179,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 180</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Chocolate moist cake piece</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(242,215,179,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 380</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Chocolate brownie</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(242,215,179,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 350</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Chocolate brownie <span style="font-size: 13px; color: #f2d7b3">(with ice cream topping)</span></span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(242,215,179,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 380</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Cakey cookie</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(242,215,179,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 180</span></li>
+            <li style="display: flex; align-items: baseline; gap: 10px; font-size: 16px; line-height: 1.5; padding: 5px 0"><span style="font-weight: 500">Lava cake</span><span aria-hidden="true" style="flex: 1 1 auto; min-width: 16px; border-bottom: 2px dotted rgba(242,215,179,0.45); transform: translateY(-5px)"></span><span style="font-weight: 700; white-space: nowrap">Rs. 250</span></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <section style="margin-top: 24px; background: #f2d7b3; border-radius: 28px; padding: clamp(28px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; box-shadow: 0 24px 48px -12px rgba(52,26,14,0.35), 0 6px 14px rgba(52,26,14,0.12)">
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <h2 style="margin: 0; font-family: Brother, Inter, sans-serif; font-weight: 700; font-size: clamp(40px, 4.4vw, 60px); line-height: 1.08; text-transform: uppercase">Hungry yet?</h2>
+        <p style="margin: 0; font-family: Optima, serif; font-size: 22px; color: #6b3a1f">come say hi at either of our branches</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px">
+        <a href="#order" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 999px; background: #f79420; color: #341a0e; font-weight: 800; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; box-shadow: 0 4px 0 #341a0e">Order ahead →</a>
+        <a href="G-Socials-Offers.dc.html" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 999px; border: 2px solid #341a0e; font-weight: 800; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none">Find a branch</a>
+      </div>
+    </section>
+  </div>
+  </main>
+
+  <footer style="margin-top: 72px">
+    <svg aria-hidden="true" viewBox="0 0 1440 60" preserveAspectRatio="none" style="display: block; width: 100%; height: 48px"><path d="M0 30c120-34 240 34 360 0s240-34 360 0 240 34 360 0 240-34 360 0v30H0z" fill="#341a0e"></path></svg>
+    <div style="background: #341a0e; color: #fff4e2">
+      <div style="max-width: 1240px; margin: 0 auto; padding: 40px 24px 28px; display: flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: space-between">
+        <img src="./assets/42e6114219f23d0dd6bcc9d6a5c74079.png" alt="Kopi &amp; Treats" style="height: 70px; width: auto">
+        <nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 8px 28px; font-weight: 600; font-size: 14px">
+          <a href="#top" style="color: #fff4e2">Menu</a>
+          <a href="G-Socials-Offers.dc.html" style="color: #fff4e2">Offers</a>
+          <a href="G-Socials-Offers.dc.html" style="color: #fff4e2">Gatherings</a>
+          <a href="G-Socials-Offers.dc.html" style="color: #fff4e2">Branches</a>
+        </nav>
+      </div>
+      <div style="border-top: 1px solid rgba(242,215,179,0.25)">
+        <div style="max-width: 1240px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #f2d7b3">
+          <a href="#top" style="display: inline-flex; align-items: center; gap: 8px; color: #f2d7b3; text-decoration: none">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor"></circle></svg>
+            @[HANDLE]
+          </a>
+          <span>Baked fresh daily</span>
+          <span>[WEBSITE]</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

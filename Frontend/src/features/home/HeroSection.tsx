@@ -1,18 +1,15 @@
 import { Container } from '@/components/layout/Container'
-import { Header } from '@/components/layout/Header'
-import { BeanScatter } from '@/components/illustrations/BeanScatter'
+import { HeroBand } from '@/components/layout/HeroBand'
 import { OrderAheadBadge } from '@/components/illustrations/OrderAheadBadge'
 import { DisplayHeading } from '@/components/ui/DisplayHeading'
 import { images } from '@/data/images'
+import { homeNav } from '@/data/navigation'
 
 export function HeroSection() {
   const cup = images.icedCoffee
   return (
-    <div className="relative overflow-hidden bg-espresso text-cream">
-      <Header />
-      <BeanScatter />
-
-      <section id="top" aria-labelledby="hero-title" tabIndex={-1} className="relative z-[1] outline-none">
+    <HeroBand links={homeNav}>
+      <section id="top" aria-labelledby="hero-title">
         <Container size="wide" className="flex flex-col items-center pt-8 text-center md:pt-12">
           <DisplayHeading as="h1" id="hero-title" size="hero" className="mt-6 text-cream">
             Brewed
@@ -42,6 +39,6 @@ export function HeroSection() {
           </div>
         </Container>
       </section>
-    </div>
+    </HeroBand>
   )
 }

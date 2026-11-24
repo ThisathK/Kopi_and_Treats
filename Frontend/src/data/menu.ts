@@ -1,7 +1,7 @@
 import { images } from '@/data/images'
-import { site } from '@/data/site'
 import type { MenuCategory } from '@/types/content'
 
+/** Home-page menu preview. Each card links to its section on the menu page. */
 export const menuCategories: MenuCategory[] = [
   {
     id: 'hot-latte',
@@ -9,7 +9,7 @@ export const menuCategories: MenuCategory[] = [
     subtitle: 'Smooth & creamy',
     theme: 'espresso',
     image: images.hotLatte,
-    href: site.orderHref,
+    href: '/menu#hot-coffee',
   },
   {
     id: 'strawberry-waffles',
@@ -17,7 +17,7 @@ export const menuCategories: MenuCategory[] = [
     subtitle: 'Fresh off the iron',
     theme: 'latte',
     image: images.strawberryWaffles,
-    href: site.orderHref,
+    href: '/menu#waffles',
   },
   {
     id: 'iced-kopi',
@@ -25,7 +25,7 @@ export const menuCategories: MenuCategory[] = [
     subtitle: 'Cold & creamy',
     theme: 'sky',
     image: images.icedCoffee,
-    href: site.orderHref,
+    href: '/menu#cold-coffee',
   },
   {
     id: 'iced-tea',
@@ -33,6 +33,6 @@ export const menuCategories: MenuCategory[] = [
     subtitle: 'Bright & refreshing',
     theme: 'orange',
     image: images.icedTea,
-    href: site.orderHref,
+    href: '/menu#iced-tea',
   },
 ]

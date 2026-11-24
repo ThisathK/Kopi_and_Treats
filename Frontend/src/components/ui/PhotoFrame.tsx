@@ -24,9 +24,16 @@ export function PhotoFrame({ image, placeholder = 'Photo', placeholderStyle = 'p
           loading={loading}
           decoding="async"
           className={clsx(
-            'absolute inset-0 size-full',
-            image.fit === 'contain' ? 'object-contain p-4' : 'object-cover',
+            'absolute',
+            image.topAnchoredWidth
+              ? 'top-5 left-1/2 h-auto max-w-none -translate-x-1/2'
+              : ['inset-0 size-full', image.fit === 'contain' ? 'object-contain p-4' : 'object-cover'],
           )}
+          style={
+            image.topAnchoredWidth
+              ? { width: `${image.topAnchoredWidth * 100}%` }
+              : { objectPosition: image.position }
+          }
         />
       ) : (
         <span

@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { SmartLink } from '@/components/ui/SmartLink'
 
 type Variant = 'primary' | 'brick' | 'outline-dark' | 'outline-light'
-type Size = 'header' | 'md' | 'lg'
+type Size = 'header' | 'md' | 'lg' | 'xl'
 
 type Props = {
   href: string
@@ -26,6 +26,7 @@ const sizes: Record<Size, string> = {
   header: 'min-h-[46px] px-[22px] text-sm font-bold tracking-header-cta',
   md: 'min-h-12 px-[22px] text-button font-extrabold tracking-button',
   lg: 'min-h-[50px] px-6 text-button font-extrabold tracking-button',
+  xl: 'min-h-[52px] px-[26px] text-button font-extrabold tracking-button',
 }
 
 export function Button({ href, variant = 'primary', size = 'lg', offsetShadow, className, children }: Props) {

@@ -1,11 +1,13 @@
 import type { ReactNode } from 'react'
 import clsx from 'clsx'
 
-type Size = 'hero' | 'section' | 'banner' | 'offers' | 'branch' | 'card'
+type Size = 'hero' | 'menuHero' | 'section' | 'category' | 'banner' | 'offers' | 'branch' | 'card'
 
 const sizes: Record<Size, string> = {
   hero: 'text-hero',
+  menuHero: 'text-menu-hero',
   section: 'text-section',
+  category: 'text-category',
   banner: 'text-banner',
   offers: 'text-offers',
   branch: 'text-branch',

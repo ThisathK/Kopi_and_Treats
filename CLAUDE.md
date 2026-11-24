@@ -3,9 +3,11 @@
 Marketing website for **Kopi & Treats**, a coffee shop (kopi + baked treats) with two branches.
 Tagline: *Sip. Savour. Smile.*
 
-**Scope (decided):** a **single long scrolling home page**. The nav items (Menu, Branches, Events)
-scroll smoothly to sections on that page. There are no separate content pages. React Router
-provides only `/` and a 404 page.
+**Scope (decided):** two pages.
+- **`/`**: a long scrolling home page. Branches and Events in the nav scroll smoothly to sections on it.
+- **`/menu`**: the full menu.
+
+Other routes go to a 404 page.
 
 ## Repository layout
 
@@ -20,7 +22,9 @@ Kopi and Treats Website/
 └── Backend/             ← empty, out of scope
 ```
 
-**Design source of truth:** `G-Socials-Offers.dc.html` inside the zip. Its inline styles hold the
+**Menu page design:** `Menu page - K&T.png` and `Menu page - K&T - html/Menu.dc.html` at the repo root.
+
+**Design source of truth (home):** `G-Socials-Offers.dc.html` inside the zip. Its inline styles hold the
 precise values. Use the PNG for visual checks. The artboard is 1440px wide.
 **Gotcha:** the export uses `content-box` sizing, so its `max-width: 1240px; padding: 0 24px`
 means 1240px of *content*. Our containers use border-box, so their max-width tokens include the
@@ -60,6 +64,8 @@ npm run lint
 | `brick` | `#a63a1c` | Red accent |
 | `orange` / `orange-soft` | `#f79420` / `#fbb35c` | Primary CTA, orange card + well |
 | `sky` / `sky-soft` | `#10b9ff` / `#7fd5fb` | Sky card + well, story badge |
+| `sky-pale` / `sky-mist` / `sky-well` / `sky-ink` | `#d6f2ff` `#a9e2fd` `#8fd8fc` `#0b6e99` | Menu page: fizzy panel, cold-coffee well, fizzy tagline/leaders |
+| `cocoa-soft` | `#6b4a3a` | Menu page: small item notes on light panels |
 | `latte` / `latte-deep` | `#f2d7b3` / `#e4c08f` | Light cards, banner, wells, borders |
 | `cream` / `cream-soft` | `#fff4e2` / `#fff8ee` | Text on dark / offers panel |
 | `paper` | `#f6ecdd` | Page background |
@@ -71,6 +77,8 @@ npm run lint
 
 Type-scale utilities:
 - `text-hero`: clamp 76–200px / 0.86
+- `text-menu-hero`: clamp 80–180 / 1 (menu page H1)
+- `text-category`: clamp 40–60 / 1.08 (menu panel titles)
 - `text-section`: clamp 48–76 / 0.95
 - `text-banner`: clamp 48–80 / 0.9
 - `text-offers`: clamp 44–64 / 0.92
@@ -79,6 +87,8 @@ Type-scale utilities:
 - `text-price`: 32
 - `text-tagline`: 21–26
 - `text-tagline-sm`: 20–24
+- `text-tagline-lg`: 24–32 (menu hero kicker)
+- `text-tagline-xs`: 19–22 (menu panel taglines)
 - `text-lead`: 18 / 1.6
 - `text-body`: 16 / 1.6
 - `text-button`: 13
@@ -89,12 +99,13 @@ Tracking utilities: `tracking-header-cta` .08em, `tracking-button` .1em, `tracki
 
 ### Radii, shadows, layout
 - **Radii:** `rounded-pill` 999, `rounded-card` 26, `rounded-section` 28, `rounded-photo` 18,
-  `rounded-photo-lg` 20, `rounded-phone` 38, `rounded-phone-screen` 30
+  `rounded-photo-lg` 20, `rounded-well` 22 (menu photo wells), `rounded-phone` 38, `rounded-phone-screen` 30
 - **Shadows:**
   - `shadow-banner` (events banner)
   - `shadow-phone`
   - `shadow-offset`: solid espresso 4px, on the gathering CTA
   - `shadow-lift`: card hover
+  - `shadow-float`: menu category pill bar
 - **Containers:** `max-w-wide` (header/hero), `max-w-main` (content/footer), via `<Container size>`
 
 ---
@@ -103,7 +114,8 @@ Tracking utilities: `tracking-header-cta` .08em, `tracking-button` .1em, `tracki
 
 **Layout** (`components/layout/`)
 - `SiteLayout`: skip link, `<Outlet/>`, `Footer`. Calls `useScrollToHash`.
-- `Header`: lives *inside* the dark hero band, so pages render it themselves (`HeroSection`, `NotFoundPage`).
+- `HeroBand`: the dark espresso band at the top of every page, containing `Header` and `BeanScatter`, with the page's hero content passed as children. Takes the page's `links`.
+- `Header`: takes `links` (`homeNav` or `menuPageNav`). A link with `current: true` is shown in orange and gets `aria-current="page"`.
   - At `lg` and up: 3-column grid (nav · logo · "Order ahead").
   - Below `lg`: logo + `MobileMenu`.
 - `MobileMenu`: hamburger and full-screen espresso drawer. Closes on Esc, locks body scroll, returns focus to the toggle.
@@ -111,10 +123,11 @@ Tracking utilities: `tracking-header-cta` .08em, `tracking-button` .1em, `tracki
 - `Container`: `size="wide" | "main"`.
 
 **UI primitives** (`components/ui/`)
-- `Button`: `variant` primary / brick / outline-dark / outline-light; `size` header / md / lg; optional `offsetShadow`.
+- `Button`: `variant` primary / brick / outline-dark / outline-light; `size` header / md / lg / xl (52px, menu CTA); optional `offsetShadow`.
 - `IconButton`: 50px circular social link.
 - `SmartLink`: router `Link` for paths starting with `/`; `<a>` otherwise; external links open in a new tab.
-- `Chip`, `Eyebrow`, `DisplayHeading` (`size` maps to the type scale), `Tagline`, `SectionHeading`.
+- `Chip`, `Eyebrow`, `DisplayHeading` (`size` maps to the type scale), `Tagline`.
+- `SectionHeading`: the tagline is optional. `spacing="loose"` (16px gaps, 1.05 leading) is for the menu page.
 - `PhotoFrame`: image well (`cover` / `contain`) or a labelled placeholder.
 - `Logo`: cream long logo, taken from the design export; the `Assets/Logos` files are dark only.
 - `DottedRule`.
@@ -130,12 +143,22 @@ Tracking utilities: `tracking-header-cta` .08em, `tracking-button` .1em, `tracki
 - `home/GatheringsBanner` (`#events`)
 - `home/OffersSection` (`#offers`) with `offers/SocialPhones`, `PhoneFrame`, `OfferPostScreen`, `StoryScreen`
 - `branches/BranchesSection` (`#branches`) with `branches/BranchCard`
+- `menu-page/`:
+  - `MenuHero`
+  - `MenuCategoryNav`: floating pill bar overlapping the hero. It wraps at `lg` and up and scrolls sideways below that.
+  - `MenuGroup`: section heading plus rows.
+  - `MenuPanelCard`: `layout="wide"` puts the photo beside a two-column list; `"stacked"` puts the photo on top, for half-width pairs. The `theme` sets background, tagline, leader and note colours.
+  - `PriceList`: name, dotted leader, price.
+  - `MenuCta`: the "Hungry yet?" banner.
 
-**Pages:** `HomePage` (`/`), `NotFoundPage` (`*`)
+**Pages:** `HomePage` (`/`), `MenuPage` (`/menu`), `NotFoundPage` (`*`). Each page sets its own `<title>` (React 19 hoists it).
 
 ### Section anchors
-`#top` (hero) · `#menu` · `#events` · `#offers` · `#branches` · `#main` (skip-link target).
-Internal links use the form `/#menu`. `useScrollToHash` handles smooth scrolling (respecting
+- Home: `#top` (hero) · `#menu` · `#events` · `#offers` · `#branches`
+- Menu page: `#hot-coffee` `#cold-coffee` `#tea` `#iced-tea` `#milkshakes` `#frappe` `#fizzy` `#waffles` `#cakes`
+- Both pages: `#main` (skip-link target)
+
+Internal links use the forms `/#branches` and `/menu#waffles`. `useScrollToHash` handles smooth scrolling (respecting
 reduced motion) and also works when the same link is clicked twice or when coming from the 404 page.
 
 ## File structure (`Frontend/`)
@@ -150,9 +173,9 @@ Frontend/
     ├── assets/
     │   ├── fonts/   brother-bold.woff · optima-regular.woff · inter-var.woff2
     │   ├── logos/   logo-long-light.png
-    │   └── images/  iced-coffee · hot-latte · strawberry-waffles · iced-tea · treats-box (.webp)
+    │   └── images/  iced-coffee · hot-latte · strawberry-waffles · iced-tea · treats-box · milkshake (.webp)
     ├── components/
-    │   ├── layout/        SiteLayout · Header · MobileMenu · Footer · Container
+    │   ├── layout/        SiteLayout · HeroBand · Header · MobileMenu · Footer · Container
     │   ├── ui/            Button · IconButton · SmartLink · Chip · Eyebrow · DisplayHeading ·
     │   │                  Tagline · SectionHeading · PhotoFrame · Logo · DottedRule
     │   ├── icons/         index.tsx
@@ -161,9 +184,10 @@ Frontend/
     │   ├── home/      HeroSection · FeatureChips · MenuPreview · GatheringsBanner · OffersSection
     │   ├── menu/      MenuCategoryCard
     │   ├── offers/    SocialPhones · PhoneFrame · OfferPostScreen · StoryScreen
-    │   └── branches/  BranchesSection · BranchCard
-    ├── pages/     HomePage · NotFoundPage
-    ├── data/      site · navigation · features · menu · branches · offers · images
+    │   ├── branches/  BranchesSection · BranchCard
+    │   └── menu-page/ MenuHero · MenuCategoryNav · MenuGroup · MenuPanelCard · PriceList · MenuCta
+    ├── pages/     HomePage · MenuPage · NotFoundPage
+    ├── data/      site · navigation · features · menu (home preview) · menuPage (full menu) · branches · offers · images
     ├── hooks/     useScrollToHash · useLockBodyScroll
     └── types/     content.ts
 ```
@@ -172,7 +196,8 @@ Frontend/
 
 All copy and image wiring lives in `src/data/`. Components contain no hard-coded content.
 
-**Menu cards** (`data/menu.ts`)
+**Home menu cards** (`data/menu.ts`). Each card links to its menu-page section:
+Hot latte → `/menu#hot-coffee`, Strawberry waffles → `/menu#waffles`, Iced Kopi → `/menu#cold-coffee`, Iced tea → `/menu#iced-tea`.
 
 | Card | Image | Theme |
 |---|---|---|
@@ -186,6 +211,19 @@ The card sub-labels were written to fit the new names. Change them freely.
 **Hero:** the iced-coffee cut-out PNG (transparent background, trimmed).
 
 **Gatherings banner:** treats box photo.
+
+**Full menu** (`data/menuPage.ts`): every item and price from the menu design. Prices are stored as numbers in LKR and formatted with `formatPrice`.
+
+| Panel | Photo |
+|---|---|
+| Hot coffee | hot latte |
+| Cold coffee | iced coffee |
+| Iced tea | iced tea |
+| Milkshakes | milkshake |
+| Waffles | strawberry waffles |
+| Cakes | treats box |
+
+Tea, Frappe and Fizzy drinks still show labelled placeholder frames until photos are supplied.
 
 **Still placeholders, deliberately** ("leave the other specifics for now"):
 - `[PRICE]`, `[HANDLE]`, `[WEBSITE]` and the social URLs (`data/site.ts`)

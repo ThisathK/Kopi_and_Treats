@@ -9,6 +9,7 @@ import { OffersSection } from '@/features/home/OffersSection'
 export function HomePage() {
   return (
     <>
+      <title>Kopi &amp; Treats — Sip. Savour. Smile</title>
       <HeroSection />
       <main id="main">
         <Container className="flex flex-col gap-7 pt-14">
